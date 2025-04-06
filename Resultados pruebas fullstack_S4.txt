@@ -1,0 +1,115 @@
+
+Resultados pruebas fullstack_S4
+
+GET http://localhost:8080/peliculas
+===================================
+Retorna:
+ {
+        "id": 1,
+        "titulo": "La Sustancia",
+        "anio": 2024,
+        "director": "Coralie Fargeat",
+        "genero": "Ciencia Ficción/Terror",
+        "sinopsis": "Una estrella del aerobic que se ve en decadencia prueba un misterioso elixir que promete rejuvenecerla, con consecuencias inesperadas."
+    },
+    {
+        "id": 2,
+        "titulo": "Matrix",
+        "anio": 1999,
+        "director": "Lana y Lilly Wachowski",
+        "genero": "Ciencia Ficción",
+        "sinopsis": "Un informático descubre que la realidad que percibe es en realidad una simulación virtual creada por máquinas inteligentes."
+    },
+    {
+        "id": 3,
+        "titulo": "Crepúsculo",
+        "anio": 2008,
+        "director": "Catherine Hardwicke",
+        "genero": "Romance/Fantasía",
+        "sinopsis": "Una adolescente se muda a un pequeño pueblo y se enamora de quien resulta ser un vampiro."
+    },
+    {
+        "id": 4,
+        "titulo": "Un hombre muerto caminando",
+        "anio": 1995,
+        "director": "Tim Robbins",
+        "genero": "Drama",
+        "sinopsis": "Una monja establece una relación espiritual con un asesino (bajo sentencia de muerte) y lo acompaña en sus últimos días."
+    },
+    {
+        "id": 5,
+        "titulo": "Cónclave",
+        "anio": 2023,
+        "director": "Edward Berger",
+        "genero": "Drama",
+        "sinopsis": "Tras la muerte del Papa, se efectúa un cónclave lleno de intrigas y secretos."
+    },
+    {
+        "id": 6,
+        "titulo": "Los puentes de Madison",
+        "anio": 1995,
+        "director": "Clint Eastwood",
+        "genero": "Drama/Romance",
+        "sinopsis": "Un fotógrafo y una ama de casa viven un amor inesperado."
+    },
+    {
+        "id": 7,
+        "titulo": "El Padrino",
+        "anio": 1972,
+        "director": "Francis Ford Coppola",
+        "genero": "Crimen/Drama",
+        "sinopsis": "La saga de la familia Corleone, una poderosa familia de la mafia italoamericana y su lucha por mantener el poder en el mundo del crimen organizado."
+    }
+]
+
+GET http://localhost:8080/peliculas/7
+=====================================
+Retorna:
+{
+    "id": 7,
+    "titulo": "El Padrino",
+    "anio": 1972,
+    "director": "Francis Ford Coppola",
+    "genero": "Crimen/Drama",
+    "sinopsis": "La saga de la familia Corleone, una poderosa familia de la mafia italoamericana y su lucha por mantener el poder en el mundo del crimen organizado."
+}
+
+Actualizar
+==========
+PUT http://localhost:8080/peliculas/7
+usando Body:
+{
+    "titulo": "El Padrino II",
+    "anio": 1974,
+    "director": "Francis Ford Coppola",
+    "genero": "Crimen/Drama",
+    "sinopsis": "Continuación de La saga de la familia Corleone, una poderosa familia de la mafia italoamericana y su lucha por mantener el poder en el mundo del crimen organizado."
+}
+
+Actualizar
+==========
+PUT http://localhost:8080/peliculas/7
+Usando Body:
+{
+    "titulo": "El Padrino",
+    "anio": 1972,
+    "director": "Francis Ford Coppola",
+    "genero": "Crimen/Drama",
+    "sinopsis": "la familia Corleone, una poderosa familia de la mafia italoamericana y su lucha por mantener el poder en el mundo del crimen organizado."
+}
+
+Crear
+======
+POST http://localhost:8080/peliculas
+Usando Body:
+{
+    "titulo": "Blanca Nieves",
+    "anio": 2025,
+    "director": "Marc Webb",
+    "genero": "Fantasia/Muscal",
+    "sinopsis": "Nueva versión de acción en vivo de la película animada de Walt Disney, Blanca Niveles y los 7 enanos (1937),"
+}
+
+Borrar
+=====
+DELETE http://localhost:8080/peliculas/8
